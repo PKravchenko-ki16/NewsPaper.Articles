@@ -1,0 +1,9 @@
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.deps.json
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.csprojAssemblyReference.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.AssemblyInfoInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.AssemblyInfo.cs
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.csproj.CoreCompileInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.Model\obj\Debug\netcoreapp3.1\NewsPaper.Articles.Models.pdb

@@ -1,0 +1,14 @@
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.deps.json
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.AssemblyInfoInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.AssemblyInfo.cs
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.csproj.CoreCompileInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.csprojAssemblyReference.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.BusinessLayer\obj\Debug\netcoreapp3.1\NewsPaper.Articles.BusinessLayer.csproj.CopyComplete
