@@ -29,6 +29,7 @@
           "MassTransit.Extensions.DependencyInjection": "7.0.6",
           "MassTransit.RabbitMQ": "7.0.6",
           "NewsPaper.Articles.BusinessLayer": "1.0.0",
+          "NewsPaper.MassTransit.Configuration": "1.0.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -901,6 +902,24 @@
         },
         "compile": {
           "lib/netstandard2.0/NewId.dll": {}
+        }
+      },
+      "NewsPaper.MassTransit.Configuration/1.0.1": {
+        "dependencies": {
+          "MassTransit": "7.0.6",
+          "MassTransit.AspNetCore": "7.0.6",
+          "MassTransit.Extensions.DependencyInjection": "7.0.6",
+          "MassTransit.RabbitMQ": "7.0.6",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.9"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -3780,6 +3799,13 @@
       "sha512": "sha512-nPL7zhPOsTJXFBaffZiQ07RN1PexMBHlDoRt9d+1Xef8CDjc50uga7Y4yt5MSbVcJsI9UntYgC8fKkPnwBCNog==",
       "path": "newid/3.0.2",
       "hashPath": "newid.3.0.2.nupkg.sha512"
+    },
+    "NewsPaper.MassTransit.Configuration/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dG8zj64OzLmnl0NQJzX9qAZsmA4cUwqf2nZGVMwhbKLXEiHpudWNsCcoNGBRalhhSg1DN9YcWWpia6rTi4NR9Q==",
+      "path": "newspaper.masstransit.configuration/1.0.1",
+      "hashPath": "newspaper.masstransit.configuration.1.0.1.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",

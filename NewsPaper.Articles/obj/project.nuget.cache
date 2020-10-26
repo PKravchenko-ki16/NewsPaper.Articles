@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WvLEsxX6FC11gOXEHJDiKnW/uIQ3GVCBbq2/DTj/i7JNcipOnSEXvR+WGRkm0IfzZPLCgeUM3gb8xyOm7SaSRw==",
+  "dgSpecHash": "ctBP4bIb+nHg1vlsF7pDQOKDhOQuKTFrr5QfPhTuZlDSlwR10QkpT6H/nsg45lvNQEDptG3aoVjVw5ZFHZlHyg==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\NewsPaper.Articles\\NewsPaper.Articles\\NewsPaper.Articles.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newid\\3.0.2\\newid.3.0.2.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.configuration\\1.0.1\\newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

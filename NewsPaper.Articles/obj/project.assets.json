@@ -587,6 +587,22 @@
           "lib/netstandard2.0/NewId.dll": {}
         }
       },
+      "NewsPaper.MassTransit.Configuration/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit": "7.0.6",
+          "MassTransit.AspNetCore": "7.0.6",
+          "MassTransit.Extensions.DependencyInjection": "7.0.6",
+          "MassTransit.RabbitMQ": "7.0.6",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.9"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -3108,6 +3124,17 @@
         "lib/netstandard2.0/NewId.xml",
         "newid.3.0.2.nupkg.sha512",
         "newid.nuspec"
+      ]
+    },
+    "NewsPaper.MassTransit.Configuration/1.0.1": {
+      "sha512": "dG8zj64OzLmnl0NQJzX9qAZsmA4cUwqf2nZGVMwhbKLXEiHpudWNsCcoNGBRalhhSg1DN9YcWWpia6rTi4NR9Q==",
+      "type": "package",
+      "path": "newspaper.masstransit.configuration/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll",
+        "newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
+        "newspaper.masstransit.configuration.nuspec"
       ]
     },
     "Newtonsoft.Json/11.0.2": {
@@ -7693,7 +7720,8 @@
       "MassTransit.AspNetCore >= 7.0.6",
       "MassTransit.Extensions.DependencyInjection >= 7.0.6",
       "MassTransit.RabbitMQ >= 7.0.6",
-      "NewsPaper.Articles.BusinessLayer >= 1.0.0"
+      "NewsPaper.Articles.BusinessLayer >= 1.0.0",
+      "NewsPaper.MassTransit.Configuration >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -7717,6 +7745,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "G:\\Repo\\Local_Nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7752,6 +7781,10 @@
           "MassTransit.RabbitMQ": {
             "target": "Package",
             "version": "[7.0.6, )"
+          },
+          "NewsPaper.MassTransit.Configuration": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [
