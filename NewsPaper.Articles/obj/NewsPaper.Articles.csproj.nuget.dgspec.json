@@ -226,6 +226,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[7.0.6, )"
@@ -245,6 +253,10 @@
             "NewsPaper.MassTransit.Configuration": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "NewsPaper.MassTransit.Contracts": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

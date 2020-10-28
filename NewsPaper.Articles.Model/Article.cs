@@ -23,54 +23,53 @@ namespace NewsPaper.Articles.Models
             Rating = 0;
         }
 
-        [Column("article_id")]
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("Id")]
         public override Guid Id { get; }
 
         [Required]
         [StringLength(100, MinimumLength = 6)]
-        [Column("title")]
+        [Column("Title")]
         public string Title { get; set; }
 
         [Required]
         [StringLength(500, MinimumLength = 50)]
-        [Column("description")]
+        [Column("Description")]
         public string Description { get; set; }
 
-        [Column("picture")]
+        [Column("Picture")]
         public string Picture { get; set; }
 
-        [Column("rating")]
+        [Column("Rating")]
         public int Rating { get; set; }
 
         [Required]
         [StringLength(10000, MinimumLength = 500)]
-        [Column("text")]
+        [Column("Text")]
         public string Text { get; set; }
 
         [Required]
-        [Column("nike_name_author")]
+        [Column("Nike_Name_Author")]
         public string NikeNameAuthor { get; set; }
 
         [Required]
-        [Column("author_guid")]
+        [Column("Author_Guid")]
         public Guid AuthorGuid { get; set; }
 
         [Required]
-        [Column("editor_guid")]
+        [Column("Editor_Guid")]
         public Guid EditorGuid { get; set; }
 
-        [Column("is_archive")]
+        [Column("Is_Archive")]
         public bool IsArchive { get; set; }
 
-        [Column("is_revision")]
+        [Column("Is_Revision")]
         public bool IsRevision { get; set; }
 
         [Required]
-        [Column("date_of_writing")]
+        [Column("Date_Of_Writing")]
         public DateTime DateOfWriting { get; set; }
 
-        [Column("date_of_revision")]
+        [Column("Date_Of_Revision")]
         public DateTime DateOfRevision { get; set; }
     }
 }

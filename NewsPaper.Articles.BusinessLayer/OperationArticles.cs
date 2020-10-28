@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using NewsPaper.Articles.DAL;
 using NewsPaper.Articles.Models;
 
@@ -12,29 +14,19 @@ namespace NewsPaper.Articles.BusinessLayer
             entity = new UnitOfWork();
         }
 
-        public IEnumerable<Article> GetAllArticles()
+        public async Task<IEnumerable<Article>> GetAllArticlesAsync()
         {
-            return entity.ArticlesRepository.GetAll();
+            return await entity.ArticlesRepository.GetAllAsync();
         }
 
-        public void CreateArticle(Article article)
+        public async Task<Article> GetByIdArticleAsync(Guid articleIGuid)
         {
-            entity.ArticlesRepository.Create(article);
+            return await entity.ArticlesRepository.GetByIdAsync(articleIGuid);
         }
 
-        public Article GetByIdArticle(int id)
+        public async Task<List<Article>> GetArticlesByAuthor(Guid authorIGuid)
         {
-            return entity.ArticlesRepository.Get(id);
-        }
-
-        public void DeleteArticle(Article article)
-        {
-            entity.ArticlesRepository.Delete(article);
-        }
-
-        public void UpdateArticle(Article article)
-        {
-            entity.ArticlesRepository.Update(article);
+            return await entity.ArticlesRepository.GetArticlesByAuthor(authorIGuid);
         }
 
         public void Commit()

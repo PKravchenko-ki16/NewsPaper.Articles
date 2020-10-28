@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "AutoMapper/10.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[10.1.0, 11.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Options": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Automatonymous/5.0.2": {
         "type": "package",
         "dependencies": {
@@ -112,7 +139,7 @@
           "lib/netcoreapp2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -601,6 +628,15 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
+        }
+      },
+      "NewsPaper.MassTransit.Contracts/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -2281,6 +2317,35 @@
     }
   },
   "libraries": {
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "type": "package",
+      "path": "automapper/10.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.10.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+      "sha512": "dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
     "Automatonymous/5.0.2": {
       "sha512": "ym5x4pmxK/WiGk5G2LcG/Vy6VyFMwhboLxaLUQWK4AWIUMf3RAZOctIt3wMHeznoKzPUj0NGlIYfpacugUOblw==",
       "type": "package",
@@ -2415,10 +2480,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2431,6 +2496,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -2440,7 +2506,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -3135,6 +3201,17 @@
         "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll",
         "newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
         "newspaper.masstransit.configuration.nuspec"
+      ]
+    },
+    "NewsPaper.MassTransit.Contracts/1.0.0": {
+      "sha512": "Wvomdz2w/yZp8SPu1Abu/n77e8eBNc9GO7zxVaAwuZMPqcOWlPHvGbQaiaOUcDV4blv9jSLWXlFyWtVKg05kig==",
+      "type": "package",
+      "path": "newspaper.masstransit.contracts/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll",
+        "newspaper.masstransit.contracts.1.0.0.nupkg.sha512",
+        "newspaper.masstransit.contracts.nuspec"
       ]
     },
     "Newtonsoft.Json/11.0.2": {
@@ -7716,12 +7793,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AutoMapper >= 10.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "MassTransit >= 7.0.6",
       "MassTransit.AspNetCore >= 7.0.6",
       "MassTransit.Extensions.DependencyInjection >= 7.0.6",
       "MassTransit.RabbitMQ >= 7.0.6",
       "NewsPaper.Articles.BusinessLayer >= 1.0.0",
-      "NewsPaper.MassTransit.Configuration >= 1.0.1"
+      "NewsPaper.MassTransit.Configuration >= 1.0.1",
+      "NewsPaper.MassTransit.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7766,6 +7846,14 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[8.1.0, )"
+          },
           "MassTransit": {
             "target": "Package",
             "version": "[7.0.6, )"
@@ -7785,6 +7873,10 @@
           "NewsPaper.MassTransit.Configuration": {
             "target": "Package",
             "version": "[1.0.1, )"
+          },
+          "NewsPaper.MassTransit.Contracts": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

@@ -2,7 +2,7 @@
 {
     public interface IUnitOfWork
     {
-        IRepository<Article> ArticlesRepository { get; }
+        IArticlesRepository ArticlesRepository { get; }
         bool SaveChanges();
         void Discard();
     }

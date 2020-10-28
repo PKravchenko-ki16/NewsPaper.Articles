@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPaper.Articles", "NewsPaper.Articles\NewsPaper.Articles.csproj", "{3DD77F72-B45B-4C94-9D53-2DEB57DDD0CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPaper.Articles", "NewsPaper.Articles\NewsPaper.Articles.csproj", "{3DD77F72-B45B-4C94-9D53-2DEB57DDD0CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPaper.Articles.Models", "NewsPaper.Articles.Model\NewsPaper.Articles.Models.csproj", "{1E162D20-6C68-4EAF-8216-ECDEAC7105CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPaper.Articles.Models", "NewsPaper.Articles.Model\NewsPaper.Articles.Models.csproj", "{1E162D20-6C68-4EAF-8216-ECDEAC7105CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPaper.Articles.DAL", "NewsPaper.Articles.DAL\NewsPaper.Articles.DAL.csproj", "{CA2F2D2B-EF5A-465E-81E2-57704DCE4D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPaper.Articles.DAL", "NewsPaper.Articles.DAL\NewsPaper.Articles.DAL.csproj", "{CA2F2D2B-EF5A-465E-81E2-57704DCE4D1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsPaper.Articles.BusinessLayer", "NewsPaper.Articles.BusinessLayer\NewsPaper.Articles.BusinessLayer.csproj", "{7D3BA781-458A-4602-9FAA-5DC21FAC807E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPaper.Articles.ViewModels", "NewsPaper.Articles.ViewModel\NewsPaper.Articles.ViewModels.csproj", "{04502E9E-0BDC-4E1B-AD5F-A8BC5EDE3645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPaper.Articles.BusinessLayer", "NewsPaper.Articles.BusinessLayer\NewsPaper.Articles.BusinessLayer.csproj", "{7D3BA781-458A-4602-9FAA-5DC21FAC807E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{7D3BA781-458A-4602-9FAA-5DC21FAC807E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D3BA781-458A-4602-9FAA-5DC21FAC807E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D3BA781-458A-4602-9FAA-5DC21FAC807E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04502E9E-0BDC-4E1B-AD5F-A8BC5EDE3645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04502E9E-0BDC-4E1B-AD5F-A8BC5EDE3645}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04502E9E-0BDC-4E1B-AD5F-A8BC5EDE3645}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04502E9E-0BDC-4E1B-AD5F-A8BC5EDE3645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -77,5 +77,8 @@ G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\ne
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Configuration.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Contracts.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\AutoMapper.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\obj\Debug\netcoreapp3.1\NewsPaper.Articles.csproj.CoreCompileInputs.cache
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\obj\Debug\netcoreapp3.1\NewsPaper.Articles.MvcApplicationPartsAssemblyInfo.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

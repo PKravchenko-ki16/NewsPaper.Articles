@@ -1,5 +1,5 @@
 ﻿using System;
-using NewsPaper.Articles.Models;
+using NewsPaper.Articles.DAL.Repository;
 using NewsPaper.Articles.Models.Interfaces;
 
 namespace NewsPaper.Articles.DAL
@@ -7,9 +7,12 @@ namespace NewsPaper.Articles.DAL
     public class UnitOfWork : IUnitOfWork
     {
         private ApplicationContext _context = new ApplicationContext();
-        private EntityRepository<Article> _article;
+        private ArticlesRepository _article;
 
-        public IRepository<Article> ArticlesRepository => _article ?? (_article = new EntityRepository<Article>(_context));
+        public IArticlesRepository ArticlesRepository
+        {
+            get { return _article ?? (_article = new ArticlesRepository(_context)); }
+        }
 
         public bool SaveChanges()
         {

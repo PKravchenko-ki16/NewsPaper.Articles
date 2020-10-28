@@ -25,6 +25,8 @@ namespace NewsPaper.Articles.DAL
                 Article article = new Article(Guid.NewGuid(), RandomString(30), RandomString(100), RandomString(1000), RandomString(10), Guid.NewGuid(), Guid.NewGuid(), RandomDateTime());
                 _listArticle.Add(article);
             }
+            _listArticle.Add(new Article(Guid.NewGuid(), RandomString(30), RandomString(100), RandomString(1000), RandomString(10), new Guid("b0d4ce5d-2757-4699-948c-cfa72ba94f86"), Guid.NewGuid(), RandomDateTime()));
+            _listArticle.Add(new Article(Guid.NewGuid(), RandomString(30), RandomString(100), RandomString(1000), RandomString(10), new Guid("b0d4ce5d-2757-4699-948c-cfa72ba94f86"), Guid.NewGuid(), RandomDateTime()));
 
         }
 
