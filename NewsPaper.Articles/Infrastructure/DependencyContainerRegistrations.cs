@@ -8,6 +8,7 @@ namespace NewsPaper.Articles.Infrastructure
         public static void Common(IServiceCollection services)
         {
             services.AddTransient<ApplicationContext>();
+            //services.AddTransient<OperationArticles>();
         }
     }
 }

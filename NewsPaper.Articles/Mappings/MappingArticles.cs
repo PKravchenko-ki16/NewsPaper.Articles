@@ -1,6 +1,6 @@
 ﻿using NewsPaper.Articles.Mappings.Base;
 using NewsPaper.Articles.Models;
-using NewsPaper.MassTransit.Contracts.DTO;
+using NewsPaper.MassTransit.Contracts.DTO.Models;
 
 namespace NewsPaper.Articles.Mappings
 {
