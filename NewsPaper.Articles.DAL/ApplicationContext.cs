@@ -3,7 +3,7 @@ using NewsPaper.Articles.Models;
 
 namespace NewsPaper.Articles.DAL
 {
-    public class ApplicationContext : DbContext
+    public sealed class ApplicationContext : DbContext
     {
         public DbSet<Article> Articles { get; set; }
         public ApplicationContext()
@@ -15,11 +15,11 @@ namespace NewsPaper.Articles.DAL
         {
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-U4JR3LV;Database=NewsPaperArticlesDb;Trusted_Connection=True;MultipleActiveResultSets=true;");
         }
-        private InitializerEntity initializerEntity = new InitializerEntity();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            FakeInitializerEntity.Init(10);
             modelBuilder.Entity<Article>().HasKey(u => u.Id);
-            modelBuilder.Entity<Article>().HasData(initializerEntity.GetEntityArticle());
+            modelBuilder.Entity<Article>().HasData(FakeInitializerEntity.Article);
         }
     }
 }

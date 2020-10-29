@@ -10,6 +10,11 @@ namespace NewsPaper.Articles.Models
     {
         public Article() {}
 
+        public Article(Guid id)
+        {
+            Id = id;
+        }
+
         public Article(Guid id, string title, string description, string text, string nikeNameAuthor, Guid authorGuid, Guid editorGuid, DateTime dateOfWriting)
         {
             Id = id;
@@ -32,7 +37,7 @@ namespace NewsPaper.Articles.Models
         public string Title { get; set; }
 
         [Required]
-        [StringLength(500, MinimumLength = 50)]
+        [StringLength(1000, MinimumLength = 50)]
         [Column("Description")]
         public string Description { get; set; }
 

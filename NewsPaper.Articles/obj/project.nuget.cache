@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "WPa1A6CKRASpwZMaf9M7861K+5yL2Ksz3gBdcRnv1yhk0f98hPRqIZywdhR4fQ8J6g4Hu+T16Gp3iuic8PdnoQ==",
+  "dgSpecHash": "xixDRSLpfmqTq2LWNfAC/FpBmk10m5cp4RdVRlqVlAEXGIQjJQ4l7kZQ+NR9Xv50lXg7uZEFWNtUZziEnZm7tg==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\NewsPaper.Articles\\NewsPaper.Articles\\NewsPaper.Articles.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KrokoR\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\automatonymous\\5.0.2\\automatonymous.5.0.2.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\bogus\\31.0.3\\bogus.31.0.3.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\greenpipes\\4.0.0\\greenpipes.4.0.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\masstransit\\7.0.6\\masstransit.7.0.6.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\masstransit.aspnetcore\\7.0.6\\masstransit.aspnetcore.7.0.6.nupkg.sha512",

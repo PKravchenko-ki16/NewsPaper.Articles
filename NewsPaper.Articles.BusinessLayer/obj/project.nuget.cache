@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uv1WPIM/p9QHtF+h2WEy/+fCZeZ/uOSrzS0gROjDzbgN+RpoOrL4iZXhJ6bk8uVuumqNVLo8sHCGCWSp3DCDgA==",
+  "dgSpecHash": "8nZuN3LNTNrOQqLdUIAA2AAGvn22oLprt10CnWkCyUAR9tOw12E3UVD5Y2Cyc3/vdQCZSZ75Rq8vXWa+Jj2o4w==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\NewsPaper.Articles\\NewsPaper.Articles.BusinessLayer\\NewsPaper.Articles.BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KrokoR\\.nuget\\packages\\bogus\\31.0.3\\bogus.31.0.3.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

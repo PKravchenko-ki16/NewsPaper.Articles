@@ -11,5 +11,5 @@ G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\bin\Debu
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.genruntimeconfig.cache
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Articles.Models.pdb
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.csproj.CoreCompileInputs.cache
 G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.csproj.CopyComplete
+G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Articles.DAL.csproj.CoreCompileInputs.cache
