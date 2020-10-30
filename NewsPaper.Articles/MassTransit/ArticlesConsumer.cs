@@ -19,8 +19,6 @@ namespace NewsPaper.Articles.MassTransit
             _operationArticles = operationArticles;
         }
 
-        //private readonly OperationArticles _articles = new OperationArticles();
-
         public async Task Consume(ConsumeContext<ArticlesByIdAuthorRequestDto> context)
         {
             var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
