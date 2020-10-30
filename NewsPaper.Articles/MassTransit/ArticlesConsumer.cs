@@ -11,17 +11,19 @@ namespace NewsPaper.Articles.MassTransit
 {
     public class ArticlesConsumer : IConsumer<ArticlesByIdAuthorRequestDto>
     {
+        private readonly OperationArticles _operationArticles;
         private readonly IMapper _mapper;
-        public ArticlesConsumer(IMapper mapper)
+        public ArticlesConsumer(IMapper mapper, OperationArticles operationArticles)
         {
             _mapper = mapper;
+            _operationArticles = operationArticles;
         }
 
-        private readonly OperationArticles _articles = new OperationArticles();
+        //private readonly OperationArticles _articles = new OperationArticles();
 
         public async Task Consume(ConsumeContext<ArticlesByIdAuthorRequestDto> context)
         {
-            var listArticles = await _articles.GetArticlesByAuthor(context.Message.AuthorGuid);
+            var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
             var articles = _mapper.Map<IEnumerable<ArticlesDto>>(listArticles);
             await context.RespondAsync(new ArticlesResponseDto
             {

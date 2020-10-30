@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NewsPaper.Articles.BusinessLayer;
 using NewsPaper.Articles.DAL;
 
 namespace NewsPaper.Articles.Infrastructure
@@ -8,7 +9,7 @@ namespace NewsPaper.Articles.Infrastructure
         public static void Common(IServiceCollection services)
         {
             services.AddTransient<ApplicationContext>();
-            //services.AddTransient<OperationArticles>();
+            services.AddTransient<OperationArticles>();
         }
     }
 }

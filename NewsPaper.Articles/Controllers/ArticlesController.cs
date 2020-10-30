@@ -10,18 +10,23 @@ namespace NewsPaper.Articles.Controllers
     [Route("[controller]")]
     public class ArticlesController : ControllerBase
     {
-        OperationArticles articles = new OperationArticles();
+        private OperationArticles _operationArticles;
+
+        public ArticlesController(OperationArticles operationArticles)
+        {
+            _operationArticles = operationArticles;
+        }
 
         [HttpGet("getarticles")]
         public async Task<IEnumerable<Article>> GetArticles()
         {
-            return await articles.GetAllArticlesAsync();
+            return await _operationArticles.GetAllArticlesAsync();
         }
 
         [HttpGet("getarticlesbyauthor")]
         public async Task<IActionResult> GetArticlesById(Guid authorGuid)
         {
-            return Ok( await articles.GetArticlesByAuthor(authorGuid));
+            return Ok( await _operationArticles.GetArticlesByAuthor(authorGuid));
         }
     }
 }
