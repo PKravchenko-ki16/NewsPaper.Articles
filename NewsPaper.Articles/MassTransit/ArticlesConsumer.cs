@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using AutoMapper;
 using MassTransit;
 using NewsPaper.Articles.BusinessLayer;
@@ -23,21 +24,37 @@ namespace NewsPaper.Articles.MassTransit
 
         public async Task Consume(ConsumeContext<ArticlesByIdAuthorRequestDto> context)
         {
-            var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
-            if (listArticles.Count == 0)
+            try
             {
-                await context.RespondAsync( new NoArticlesFoundForAuthor
-                {
-                    AuthorGuid = context.Message.AuthorGuid,
-                    MassageException = $"This author has no articles {context.Message.AuthorGuid}"
-                });
-            }
-            else
-            {
+                var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
                 var articles = _mapper.Map<IEnumerable<ArticlesDto>>(listArticles);
                 await context.RespondAsync(new ArticlesResponseDto
                 {
                     ArticlesDto = articles
+                });
+            }
+            catch (NoArticlesFoundForAuthorAppException e)
+            {
+                await context.RespondAsync(new NoArticlesFoundForAuthor
+                {
+                    AuthorGuid = context.Message.AuthorGuid,
+                    MassageException = $"{e.Message}"
+                });
+            }
+            catch (ApplicationException e)
+            {
+                await context.RespondAsync(new NoArticlesFoundForAuthor
+                {
+                    AuthorGuid = context.Message.AuthorGuid,
+                    MassageException = $"{e.Message}"
+                });
+            }
+            catch (Exception e)
+            {
+                await context.RespondAsync(new NoArticlesFoundForAuthor
+                {
+                    AuthorGuid = context.Message.AuthorGuid,
+                    MassageException = $"{e.Message}"
                 });
             }
         }
