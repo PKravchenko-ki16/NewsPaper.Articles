@@ -3,9 +3,11 @@ using AutoMapper;
 using MassTransit;
 using NewsPaper.Articles.BusinessLayer;
 using System.Collections.Generic;
-using NewsPaper.MassTransit.Contracts.DTO.Models;
-using NewsPaper.MassTransit.Contracts.DTO.Requests;
-using NewsPaper.MassTransit.Contracts.DTO.Responses;
+using NewsPaper.Articles.Models.Exceptions;
+using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Models.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
 
 namespace NewsPaper.Articles.MassTransit
 {
@@ -22,11 +24,22 @@ namespace NewsPaper.Articles.MassTransit
         public async Task Consume(ConsumeContext<ArticlesByIdAuthorRequestDto> context)
         {
             var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
-            var articles = _mapper.Map<IEnumerable<ArticlesDto>>(listArticles);
-            await context.RespondAsync(new ArticlesResponseDto
+            if (listArticles.Count == 0)
             {
-                ArticlesDto = articles
-            });
+                await context.RespondAsync( new NoArticlesFoundForAuthor
+                {
+                    AuthorGuid = context.Message.AuthorGuid,
+                    MassageException = $"This author has no articles {context.Message.AuthorGuid}"
+                });
+            }
+            else
+            {
+                var articles = _mapper.Map<IEnumerable<ArticlesDto>>(listArticles);
+                await context.RespondAsync(new ArticlesResponseDto
+                {
+                    ArticlesDto = articles
+                });
+            }
         }
     }
 }

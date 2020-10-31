@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NewsPaper.Articles.Configure;
 using NewsPaper.Articles.ConfigureServices;
-using NewsPaper.Articles.Infrastructure;
+using NewsPaper.Articles.Infrastructure.DependencyInjection;
 
 namespace NewsPaper.Articles
 {

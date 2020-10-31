@@ -15,7 +15,10 @@ namespace NewsPaper.Articles.ConfigureServices
             {
                 IsDebug = section.GetValue<bool>("IsDebug"),
                 ServiceName = "Articles",
-                Configurator = busMassTransit => { busMassTransit.AddConsumer<ArticlesConsumer>(); }
+                Configurator = busMassTransit =>
+                {
+                    busMassTransit.AddConsumer<ArticlesConsumer>();
+                }
             });
         }
     }

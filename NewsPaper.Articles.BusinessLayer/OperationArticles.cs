@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using NewsPaper.Articles.DAL;
 using NewsPaper.Articles.Models;
+using NewsPaper.Articles.Models.Exceptions;
 
 namespace NewsPaper.Articles.BusinessLayer
 {
@@ -26,7 +28,10 @@ namespace NewsPaper.Articles.BusinessLayer
 
         public async Task<List<Article>> GetArticlesByAuthor(Guid authorIGuid)
         {
-            return await entity.ArticlesRepository.GetArticlesByAuthor(authorIGuid);
+            var listArticle = await entity.ArticlesRepository.GetArticlesByAuthor(authorIGuid);
+            //if (!listArticle.Any())
+            //    throw new NoArticlesFoundForAuthorAppException("This author has no articles " + authorIGuid);
+            return listArticle;
         }
 
         public void Commit()

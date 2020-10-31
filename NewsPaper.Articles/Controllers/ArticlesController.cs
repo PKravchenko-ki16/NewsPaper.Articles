@@ -4,10 +4,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NewsPaper.Articles.BusinessLayer;
 using NewsPaper.Articles.Models;
+using NewsPaper.Articles.Models.Exceptions;
 
 namespace NewsPaper.Articles.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ArticlesController : ControllerBase
     {
         private OperationArticles _operationArticles;
@@ -26,7 +27,15 @@ namespace NewsPaper.Articles.Controllers
         [HttpGet("getarticlesbyauthor")]
         public async Task<IActionResult> GetArticlesById(Guid authorGuid)
         {
-            return Ok( await _operationArticles.GetArticlesByAuthor(authorGuid));
+            try
+            {
+                var result = await _operationArticles.GetArticlesByAuthor(authorGuid);
+                return Ok(result);
+            }
+            catch (NoArticlesFoundForAuthorAppException exception)
+            {
+                return Ok(exception);
+            }
         }
     }
 }

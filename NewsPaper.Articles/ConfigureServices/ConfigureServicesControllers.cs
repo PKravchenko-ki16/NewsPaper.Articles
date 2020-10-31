@@ -6,7 +6,9 @@ namespace NewsPaper.Articles.ConfigureServices
     {
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
         }
     }
 }

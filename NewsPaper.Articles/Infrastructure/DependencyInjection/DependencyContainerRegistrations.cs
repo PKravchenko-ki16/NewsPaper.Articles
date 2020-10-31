@@ -2,7 +2,7 @@
 using NewsPaper.Articles.BusinessLayer;
 using NewsPaper.Articles.DAL;
 
-namespace NewsPaper.Articles.Infrastructure
+namespace NewsPaper.Articles.Infrastructure.DependencyInjection
 {
     public class DependencyContainerRegistrations
     {
