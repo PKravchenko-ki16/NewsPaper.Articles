@@ -5,8 +5,10 @@ namespace NewsPaper.Articles.Models.Exceptions
 {
     public class NoArticlesFoundForAuthorAppException : ApplicationException
     {
+        public short CodeException => 0011;
+
         public NoArticlesFoundForAuthorAppException()
-            : base(Exceptions.Base.Exceptions.NoArticlesFoundForAuthorException)
+            : base(Base.Exceptions.NoArticlesFoundForAuthorException)
         {
         }
 

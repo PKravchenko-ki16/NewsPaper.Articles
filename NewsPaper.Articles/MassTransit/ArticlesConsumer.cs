@@ -38,14 +38,7 @@ namespace NewsPaper.Articles.MassTransit
                 await context.RespondAsync(new NoArticlesFoundForAuthor
                 {
                     AuthorGuid = context.Message.AuthorGuid,
-                    MassageException = $"{e.Message}"
-                });
-            }
-            catch (ApplicationException e)
-            {
-                await context.RespondAsync(new NoArticlesFoundForAuthor
-                {
-                    AuthorGuid = context.Message.AuthorGuid,
+                    CodeException = e.CodeException,
                     MassageException = $"{e.Message}"
                 });
             }
