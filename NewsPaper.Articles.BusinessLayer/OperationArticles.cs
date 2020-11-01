@@ -26,9 +26,9 @@ namespace NewsPaper.Articles.BusinessLayer
             return await entity.ArticlesRepository.GetByIdAsync(articleIGuid);
         }
 
-        public async Task<List<Article>> GetArticlesByAuthor(Guid authorIGuid)
+        public async Task<List<Article>> GetArticlesByAuthor(Guid authorGuid)
         {
-            var listArticle = await entity.ArticlesRepository.GetArticlesByAuthor(authorIGuid);
+            var listArticle = await entity.ArticlesRepository.GetArticlesByAuthor(authorGuid);
             if (!listArticle.Any())
                 throw new NoArticlesFoundForAuthorAppException("This author has no articles");
             return listArticle;

@@ -57,6 +57,10 @@ namespace NewsPaper.Articles.Models
         public string NikeNameAuthor { get; set; }
 
         [Required]
+        [Column("Nike_Name_Editor")]
+        public string NikeNameEditor { get; set; }
+
+        [Required]
         [Column("Author_Guid")]
         public Guid AuthorGuid { get; set; }
 

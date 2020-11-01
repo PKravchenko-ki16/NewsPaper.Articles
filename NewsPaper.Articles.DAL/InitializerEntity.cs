@@ -19,6 +19,7 @@ namespace NewsPaper.Articles.DAL
                 .RuleFor(x => x.Picture, f => f.Image.PlaceholderUrl(400, 300))
                 .RuleFor(x => x.Rating, f => f.Random.Byte(1, 100))
                 .RuleFor(x => x.NikeNameAuthor, f => f.Name.FirstName(Name.Gender.Male))
+                .RuleFor(x => x.NikeNameEditor, f => f.Name.FirstName(Name.Gender.Male))
                 .RuleFor(x => x.AuthorGuid, f => Guid.NewGuid())
                 .RuleFor(x => x.EditorGuid, f => Guid.NewGuid())
                 .RuleFor(x => x.IsArchive, f => f.Random.Bool())
@@ -51,6 +52,7 @@ namespace NewsPaper.Articles.DAL
                 Article[i].Picture = articles[i].Picture;
                 Article[i].Rating = articles[i].Rating;
                 Article[i].NikeNameAuthor = articles[i].NikeNameAuthor;
+                Article[i].NikeNameEditor = articles[i].NikeNameEditor;
                 Article[i].AuthorGuid = articles[i].AuthorGuid;
                 Article[i].EditorGuid = articles[i].EditorGuid;
                 Article[i].IsArchive = articles[i].IsArchive;
