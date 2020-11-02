@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NewsPaper.Articles.MassTransit;
+using NewsPaper.Articles.MassTransit.Articles;
 using NewsPaper.MassTransit.Configuration;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
@@ -17,7 +17,7 @@ namespace NewsPaper.Articles.ConfigureServices
                 ServiceName = "Articles",
                 Configurator = busMassTransit =>
                 {
-                    busMassTransit.AddConsumer<ArticlesConsumer>();
+                    busMassTransit.AddConsumer<ArticlesByIdAuthorConsumer>();
                 }
             });
         }

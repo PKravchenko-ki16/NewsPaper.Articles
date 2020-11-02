@@ -15,13 +15,14 @@ namespace NewsPaper.Articles.Models
             Id = id;
         }
 
-        public Article(Guid id, string title, string description, string text, string nikeNameAuthor, Guid authorGuid, Guid editorGuid, DateTime dateOfWriting)
+        public Article(Guid id, string title, string description, string text, string nikeNameAuthor, string nikeNameEditor, Guid authorGuid, Guid editorGuid, DateTime dateOfWriting)
         {
             Id = id;
             Title = title;
             Description = description;
             Text = text;
             NikeNameAuthor = nikeNameAuthor;
+            NikeNameEditor = nikeNameEditor;
             AuthorGuid = authorGuid;
             EditorGuid = editorGuid;
             DateOfWriting = dateOfWriting;

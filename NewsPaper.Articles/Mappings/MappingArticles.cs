@@ -8,7 +8,7 @@ namespace NewsPaper.Articles.Mappings
     {
         public MappingArticles()
         {
-            CreateMap<Article, ArticlesDto>();
+            CreateMap<Article, ArticleDto>();
         }
     }
 }
