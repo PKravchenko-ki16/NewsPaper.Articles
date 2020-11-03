@@ -1,8 +1,0 @@
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\bin\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.deps.json
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\bin\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.dll
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\bin\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.pdb
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\obj\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.AssemblyInfoInputs.cache
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\obj\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.AssemblyInfo.cs
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\obj\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.csproj.CoreCompileInputs.cache
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\obj\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.dll
-G:\Repo\NewsPaperMicroservice\NewsPaper.Articles\NewsPaper.Articles.ViewModel\obj\Debug\netcoreapp3.1\NewsPaper.Articles.ViewModels.pdb
