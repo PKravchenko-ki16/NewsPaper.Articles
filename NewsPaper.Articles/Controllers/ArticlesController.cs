@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NewsPaper.Articles.BusinessLayer;
-using NewsPaper.Articles.Models;
 using NewsPaper.Articles.Models.Exceptions;
 
 namespace NewsPaper.Articles.Controllers
@@ -18,10 +16,32 @@ namespace NewsPaper.Articles.Controllers
             _operationArticles = operationArticles;
         }
 
-        [HttpGet("getarticles")]
-        public async Task<IEnumerable<Article>> GetArticles()
+        [HttpGet("getarticlebyid")]
+        public async Task<IActionResult> GetArticleById(Guid articleGuid)
         {
-            return await _operationArticles.GetAllArticlesAsync();
+            try
+            {
+                var result = await _operationArticles.GetByIdArticleAsync(articleGuid);
+                return Ok(result);
+            }
+            catch (NoArticlesFoundForAuthorAppException exception)
+            {
+                return Ok(exception);
+            }
+        }
+
+        [HttpGet("getarticles")]
+        public async Task<IActionResult> GetArticles()
+        {
+            try
+            {
+                var result = await _operationArticles.GetAllArticlesAsync();
+                return Ok(result);
+            }
+            catch (NoArticlesFoundForAuthorAppException exception)
+            {
+                return Ok(exception);
+            }
         }
 
         [HttpGet("getarticlesbyauthor")]

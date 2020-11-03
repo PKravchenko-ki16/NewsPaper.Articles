@@ -17,7 +17,7 @@ namespace NewsPaper.Articles.ConfigureServices
                 ServiceName = "Articles",
                 Configurator = busMassTransit =>
                 {
-                    busMassTransit.AddConsumer<ArticlesByIdAuthorConsumer>();
+                    busMassTransit.AddConsumer<GetArticlesByIdAuthorConsumer>();
                 }
             });
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using MassTransit;
@@ -12,30 +11,30 @@ using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
 
 namespace NewsPaper.Articles.MassTransit.Articles
 {
-    public class ArticlesByIdAuthorConsumer : IConsumer<ArticlesByIdAuthorRequestDto>
+    public class GetArticleConsumer : IConsumer<ArticleByIdRequestDto>
     {
         private readonly OperationArticles _operationArticles;
         private readonly IMapper _mapper;
-        public ArticlesByIdAuthorConsumer(IMapper mapper, OperationArticles operationArticles)
+        public GetArticleConsumer(IMapper mapper, OperationArticles operationArticles)
         {
             _mapper = mapper;
             _operationArticles = operationArticles;
         }
 
-        public async Task Consume(ConsumeContext<ArticlesByIdAuthorRequestDto> context)
+        public async Task Consume(ConsumeContext<ArticleByIdRequestDto> context)
         {
             try
             {
-                var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
-                var articles = _mapper.Map<IEnumerable<ArticleDto>>(listArticles);
-                await context.RespondAsync(new ArticlesResponseDto
+                var result = await _operationArticles.GetByIdArticleAsync(context.Message.ArticleGuid);
+                var article = _mapper.Map<ArticleDto>(result);
+                await context.RespondAsync(new ArticleResponseDto
                 {
-                    ArticlesDto = articles
+                    ArticleDto = article
                 });
             }
             catch (NoArticlesFoundForAuthorAppException e)
             {
-                await context.RespondAsync(new NoArticlesFoundForAuthor
+                await context.RespondAsync(new NoArticlesFoundForAuthor()
                 {
                     CodeException = e.CodeException,
                     MassageException = $"{e.Message}"
