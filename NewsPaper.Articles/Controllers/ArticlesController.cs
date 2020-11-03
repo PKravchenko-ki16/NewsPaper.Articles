@@ -44,8 +44,8 @@ namespace NewsPaper.Articles.Controllers
             }
         }
 
-        [HttpGet("getarticlesbyauthor")]
-        public async Task<IActionResult> GetArticlesById(Guid authorGuid)
+        [HttpGet("getarticlesbyidauthor")]
+        public async Task<IActionResult> GetArticlesByIdAuthor(Guid authorGuid)
         {
             try
             {

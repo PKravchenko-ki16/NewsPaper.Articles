@@ -28,7 +28,7 @@ namespace NewsPaper.Articles.MassTransit.Articles
             {
                 var listArticles = await _operationArticles.GetArticlesByAuthor(context.Message.AuthorGuid);
                 var articles = _mapper.Map<IEnumerable<ArticleDto>>(listArticles);
-                await context.RespondAsync(new ArticlesResponseDto
+                await context.RespondAsync(new ArticlesByIdAuthorResponseDto()
                 {
                     ArticlesDto = articles
                 });
