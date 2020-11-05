@@ -19,7 +19,7 @@ namespace NewsPaper.Articles.DAL.Repository
 
         public async Task<List<Article>> GetArticlesByAuthor(Guid authorGuid)
         {
-            return await _context.Articles.Where(x => x.AuthorGuid == authorGuid).ToListAsync();
+            return await _context.Articles.Where(x => x.AuthorGuid == authorGuid && x.IsArchive == false).ToListAsync();
         }
 
         public async Task<IEnumerable<Article>> GetAllAsync()
