@@ -1,9 +1,11 @@
-﻿namespace NewsPaper.Articles.Models.Interfaces
+﻿using System.Threading.Tasks;
+
+namespace NewsPaper.Articles.Models.Interfaces
 {
     public interface IUnitOfWork
     {
         IArticlesRepository ArticlesRepository { get; }
-        bool SaveChanges();
+        Task<bool> SaveChangesAsync();
         void Discard();
     }
 }

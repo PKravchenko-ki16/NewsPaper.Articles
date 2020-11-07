@@ -20,6 +20,8 @@ namespace NewsPaper.Articles.ConfigureServices
                     busMassTransit.AddConsumer<GetArticlesByIdAuthorConsumer>();
                     busMassTransit.AddConsumer<GetArticlesConsumer>();
                     busMassTransit.AddConsumer<GetArticleConsumer>();
+                    busMassTransit.AddConsumer<GoArchiveArticleConsumer>();
+                    busMassTransit.AddConsumer<CreateArticleConsumer>();
                 }
             });
         }

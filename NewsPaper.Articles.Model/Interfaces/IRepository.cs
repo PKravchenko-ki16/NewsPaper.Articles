@@ -8,9 +8,7 @@ namespace NewsPaper.Articles.Models.Interfaces
         where T : DomainObject, new()
     {
         Task<IEnumerable<T>> GetAllAsync();
-        Task<T> GetByIdAsync(Guid articlesGuid);
-        //Task Update(T obj);
-        //Task Delete(T obj);
-        //Task Create(T obj);
+        Task<T> GetByIdAsync(Guid objGuid);
+        Task<Guid> Create(T obj);
     }
 }

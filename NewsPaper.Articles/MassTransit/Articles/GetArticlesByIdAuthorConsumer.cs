@@ -35,7 +35,7 @@ namespace NewsPaper.Articles.MassTransit.Articles
             }
             catch (NoArticlesFoundForAuthorAppException e)
             {
-                await context.RespondAsync(new NoArticlesFoundForAuthor
+                await context.RespondAsync(new NoArticlesFound
                 {
                     CodeException = e.CodeException,
                     MassageException = $"{e.Message}"
@@ -43,7 +43,7 @@ namespace NewsPaper.Articles.MassTransit.Articles
             }
             catch (Exception e)
             {
-                await context.RespondAsync(new NoArticlesFoundForAuthor
+                await context.RespondAsync(new NoArticlesFound
                 {
                     MassageException = $"{e.Message}"
                 });

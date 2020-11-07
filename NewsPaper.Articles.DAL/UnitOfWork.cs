@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using NewsPaper.Articles.DAL.Repository;
 using NewsPaper.Articles.Models.Interfaces;
 
@@ -14,11 +15,11 @@ namespace NewsPaper.Articles.DAL
             get { return _article ?? (_article = new ArticlesRepository(_context)); }
         }
 
-        public bool SaveChanges()
+        public async Task<bool> SaveChangesAsync()
         {
             try
             {
-                _context.SaveChanges();
+               await _context.SaveChangesAsync();
                 return true;
             }
             catch (Exception)

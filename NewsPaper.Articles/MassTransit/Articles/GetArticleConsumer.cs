@@ -32,9 +32,9 @@ namespace NewsPaper.Articles.MassTransit.Articles
                     ArticleDto = article
                 });
             }
-            catch (NoArticlesFoundForAuthorAppException e)
+            catch (FailedTransferToArchiveAppException e)
             {
-                await context.RespondAsync(new NoArticlesFoundForAuthor()
+                await context.RespondAsync(new FailedTransferToArchive
                 {
                     CodeException = e.CodeException,
                     MassageException = $"{e.Message}"
@@ -42,7 +42,7 @@ namespace NewsPaper.Articles.MassTransit.Articles
             }
             catch (Exception e)
             {
-                await context.RespondAsync(new NoArticlesFoundForAuthor
+                await context.RespondAsync(new FailedTransferToArchive
                 {
                     MassageException = $"{e.Message}"
                 });

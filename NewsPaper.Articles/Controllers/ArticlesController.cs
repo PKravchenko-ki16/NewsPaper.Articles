@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NewsPaper.Articles.BusinessLayer;
+using NewsPaper.Articles.Models;
 using NewsPaper.Articles.Models.Exceptions;
 
 namespace NewsPaper.Articles.Controllers
@@ -53,6 +54,34 @@ namespace NewsPaper.Articles.Controllers
                 return Ok(result);
             }
             catch (NoArticlesFoundForAuthorAppException exception)
+            {
+                return Ok(exception);
+            }
+        }
+
+        [HttpGet("goarchivearticle")]
+        public async Task<IActionResult> GoArchiveArticle(Guid articleGuid)
+        {
+            try
+            {
+                var result = await _operationArticles.GoArchive(articleGuid);
+                return Ok(result);
+            }
+            catch (FailedTransferToArchiveAppException exception)
+            {
+                return Ok(exception);
+            }
+        }
+
+        [HttpPost("createarticle")]
+        public async Task<IActionResult> CreateArticle(Article article)
+        {
+            try
+            {
+                var result = await _operationArticles.CreateArticle(article);
+                return Ok(result);
+            }
+            catch (FailedToCreateArticleAppException exception)
             {
                 return Ok(exception);
             }

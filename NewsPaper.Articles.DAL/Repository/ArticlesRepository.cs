@@ -17,7 +17,7 @@ namespace NewsPaper.Articles.DAL.Repository
             _context = context;
         }
 
-        public async Task<List<Article>> GetArticlesByAuthor(Guid authorGuid)
+        public async Task<List<Article>> GetAllByAuthor(Guid authorGuid)
         {
             return await _context.Articles.Where(x => x.AuthorGuid == authorGuid && x.IsArchive == false).ToListAsync();
         }
@@ -30,6 +30,46 @@ namespace NewsPaper.Articles.DAL.Repository
         public async Task<Article> GetByIdAsync(Guid articleGuid)
         {
             return await _context.Articles.Where(x=>x.Id == articleGuid).FirstOrDefaultAsync();
+        }
+
+        public async Task<Guid> Create(Article article)
+        {
+            try
+            {
+                _context.Articles.Add(article);
+                return article.Id;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+               await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> GoArchive(Guid articleGuid)
+        {
+            try
+            {
+               var article = await GetByIdAsync(articleGuid);
+               if (article != null)
+               {
+                   article.IsArchive = true;
+                   _context.Articles.Update(article);
+                   return true;
+               }
+               throw new ApplicationException("Not found article in DataBase");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+               await _context.SaveChangesAsync();
+            }
         }
     }
 }

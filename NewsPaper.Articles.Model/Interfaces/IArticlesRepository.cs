@@ -6,6 +6,7 @@ namespace NewsPaper.Articles.Models.Interfaces
 {
     public interface IArticlesRepository : IRepository<Article>
     {
-        Task<List<Article>> GetArticlesByAuthor(Guid authorGuid);
+        Task<List<Article>> GetAllByAuthor(Guid authorGuid);
+        Task<bool> GoArchive(Guid articleGuid);
     }
 }

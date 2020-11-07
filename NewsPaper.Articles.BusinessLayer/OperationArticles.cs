@@ -10,33 +10,44 @@ namespace NewsPaper.Articles.BusinessLayer
 {
     public class OperationArticles
     {
-        private UnitOfWork entity;
+        private readonly UnitOfWork _entity;
         public OperationArticles()
         {
-            entity = new UnitOfWork();
+            _entity = new UnitOfWork();
         }
 
         public async Task<IEnumerable<Article>> GetAllArticlesAsync()
         {
-            return await entity.ArticlesRepository.GetAllAsync();
+            return await _entity.ArticlesRepository.GetAllAsync();
         }
 
         public async Task<Article> GetByIdArticleAsync(Guid articleIGuid)
         {
-            return await entity.ArticlesRepository.GetByIdAsync(articleIGuid);
+            return await _entity.ArticlesRepository.GetByIdAsync(articleIGuid);
         }
 
         public async Task<List<Article>> GetArticlesByAuthor(Guid authorGuid)
         {
-            var listArticle = await entity.ArticlesRepository.GetArticlesByAuthor(authorGuid);
+            var listArticle = await _entity.ArticlesRepository.GetAllByAuthor(authorGuid);
             if (!listArticle.Any())
                 throw new NoArticlesFoundForAuthorAppException("This author has no articles");
             return listArticle;
         }
 
-        public void Commit()
+        public async Task<Guid> CreateArticle(Article article)
         {
-            entity.SaveChanges();
+            var guidCreatedArticle = await _entity.ArticlesRepository.Create(article);
+            if (guidCreatedArticle != null)
+                throw new FailedToCreateArticleAppException("Failed to create article");
+            return guidCreatedArticle;
+        }
+        
+        public async Task<bool> GoArchive(Guid articleGuid)
+        {
+            var isArchive = await _entity.ArticlesRepository.GoArchive(articleGuid);
+            if (!isArchive)
+                throw new FailedTransferToArchiveAppException("Failed transfer to archive");
+            return true;
         }
     }
 }
