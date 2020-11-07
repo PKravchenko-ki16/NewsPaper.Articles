@@ -12,6 +12,8 @@ namespace NewsPaper.Articles.Mappings
             CreateMap<Article, ArticleDto>();
             CreateMap<ArticleDto, Article>()
                 .ConstructUsing(s => new Article(Guid.NewGuid()));
+            CreateMap<Article, Article>()
+                .ConstructUsing(s=> new Article(s.Id));
         }
     }
 }
