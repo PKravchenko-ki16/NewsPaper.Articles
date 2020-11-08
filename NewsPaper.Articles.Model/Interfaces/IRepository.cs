@@ -9,6 +9,6 @@ namespace NewsPaper.Articles.Models.Interfaces
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(Guid objGuid);
-        Task<Guid> Create(T obj);
+        Task<T> Create(T obj);
     }
 }

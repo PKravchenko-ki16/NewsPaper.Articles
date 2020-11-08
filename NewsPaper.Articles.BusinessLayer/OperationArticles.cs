@@ -34,10 +34,10 @@ namespace NewsPaper.Articles.BusinessLayer
             return listArticle;
         }
 
-        public async Task<Guid> CreateArticle(Article article)
+        public async Task<Article> CreateArticle(Article article)
         {
             var guidCreatedArticle = await _entity.ArticlesRepository.Create(article);
-            if (guidCreatedArticle != null)
+            if (guidCreatedArticle == null)
                 throw new FailedToCreateArticleAppException("Failed to create article");
             return guidCreatedArticle;
         }

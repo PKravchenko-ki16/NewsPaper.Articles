@@ -27,6 +27,8 @@ namespace NewsPaper.Articles.Models
             EditorGuid = editorGuid;
             DateOfWriting = dateOfWriting;
             Rating = 0;
+            IsArchive = false;
+            IsRevision = false;
         }
 
         [Column("Id")]

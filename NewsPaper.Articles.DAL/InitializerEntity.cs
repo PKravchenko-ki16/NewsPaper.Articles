@@ -9,8 +9,6 @@ namespace NewsPaper.Articles.DAL
 {
     public static class FakeInitializerEntity
     {
-        private static readonly IMapper _mapper;
-
         public static List<Article> Article = new List<Article>();
 
         public static void Init(int count)
@@ -48,7 +46,22 @@ namespace NewsPaper.Articles.DAL
 
         private static void SetIdArticles(List<Article> articles)
         {
-            Article = _mapper.Map<List<Article>>(articles);
+            for (int i = 0; i < Article.Count; i++)
+            {
+                Article[i].Title = articles[i].Title;
+                Article[i].Description = articles[i].Description;
+                Article[i].Text = articles[i].Text;
+                Article[i].Picture = articles[i].Picture;
+                Article[i].Rating = articles[i].Rating;
+                Article[i].NikeNameAuthor = articles[i].NikeNameAuthor;
+                Article[i].NikeNameEditor = articles[i].NikeNameEditor;
+                Article[i].AuthorGuid = articles[i].AuthorGuid;
+                Article[i].EditorGuid = articles[i].EditorGuid;
+                Article[i].IsArchive = articles[i].IsArchive;
+                Article[i].IsRevision = articles[i].IsRevision;
+                Article[i].DateOfWriting = articles[i].DateOfWriting;
+                Article[i].DateOfRevision = articles[i].DateOfRevision;
+            }
         }
     }
 }

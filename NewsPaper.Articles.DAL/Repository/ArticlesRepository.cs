@@ -19,12 +19,14 @@ namespace NewsPaper.Articles.DAL.Repository
 
         public async Task<List<Article>> GetAllByAuthor(Guid authorGuid)
         {
-            return await _context.Articles.Where(x => x.AuthorGuid == authorGuid && x.IsArchive == false).ToListAsync();
+            DateTime defaultDateTime = new DateTime();
+            return await _context.Articles.Where(x => x.AuthorGuid == authorGuid && x.IsArchive == false && x.DateOfRevision > defaultDateTime).ToListAsync();
         }
 
         public async Task<IEnumerable<Article>> GetAllAsync()
         {
-            return await _context.Articles.Where(x=>x.IsArchive == false).ToListAsync();
+            DateTime defaultDateTime = new DateTime();
+            return await _context.Articles.Where(x=>x.IsArchive == false && x.DateOfRevision > defaultDateTime).ToListAsync();
         }
 
         public async Task<Article> GetByIdAsync(Guid articleGuid)
@@ -32,12 +34,12 @@ namespace NewsPaper.Articles.DAL.Repository
             return await _context.Articles.Where(x=>x.Id == articleGuid).FirstOrDefaultAsync();
         }
 
-        public async Task<Guid> Create(Article article)
+        public async Task<Article> Create(Article article)
         {
             try
             {
                 _context.Articles.Add(article);
-                return article.Id;
+                return article;
             }
             catch (Exception e)
             {

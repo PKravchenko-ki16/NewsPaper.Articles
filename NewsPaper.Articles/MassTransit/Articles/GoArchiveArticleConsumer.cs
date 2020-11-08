@@ -24,10 +24,7 @@ namespace NewsPaper.Articles.MassTransit.Articles
                 var result = await _operationArticles.GoArchive(context.Message.ArticleGuid);
                 if (result)
                 {
-                    await context.RespondAsync(new ArticleGoArchiveResponseDto
-                    {
-                        ArticleGuid = context.Message.ArticleGuid
-                    });
+                    await context.RespondAsync(new ArticleGoArchiveResponseDto());
                 }
                 else
                 {

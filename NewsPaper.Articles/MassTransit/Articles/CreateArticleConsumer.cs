@@ -6,6 +6,7 @@ using NewsPaper.Articles.BusinessLayer;
 using NewsPaper.Articles.Models;
 using NewsPaper.Articles.Models.Exceptions;
 using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Models.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
 
@@ -26,10 +27,14 @@ namespace NewsPaper.Articles.MassTransit.Articles
             try
             {
                 var article = _mapper.Map<Article>(context.Message.Article);
+                
                 var result = await _operationArticles.CreateArticle(article);
+
+                var articleDto = _mapper.Map<ArticleDto>(result);
+
                 await context.RespondAsync(new ArticleCreateResponseDto
                 {
-                    ArticleGuid = result
+                    Article = articleDto
                 });
             }
             catch (FailedToCreateArticleAppException e)
