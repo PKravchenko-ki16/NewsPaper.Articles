@@ -87,7 +87,7 @@ public static void ConfigureService(IServiceCollection services, IConfiguration 
 - :white_check_mark:[NewsPaper Review](https://github.com/PKravchenko-ki16/NewsPaper)
 - :white_check_mark:[NewsPaper.MassTransit.Configuration](https://github.com/PKravchenko-ki16/NewsPaper.MassTransit.Configuration)
 - :white_check_mark:[NewsPaper.MassTransit.Contracts](https://github.com/PKravchenko-ki16/NewsPaper.MassTransit.Contracts)
-- :black_square_button:[NewsPaper.IdentityServer]()
+- :white_check_mark:[NewsPaper.IdentityServer](https://github.com/PKravchenko-ki16/NewsPaper.IdentityServer)
 - :white_check_mark:[Newspaper.GateWay](https://github.com/PKravchenko-ki16/Newspaper.GateWay)
 - :white_check_mark:[NewsPaper.Accounts](https://github.com/PKravchenko-ki16/NewsPaper.Accounts)
 - :white_check_mark:NewsPaper.Articles
